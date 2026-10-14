@@ -1,0 +1,33 @@
+            MySql:
+Sql -> Structer Query Language
+what is dataBase?
+->It Is Container where it Store 
+   Static Data.
+ 
+ |----------|
+ |data1     |
+ |data1     |
+ 
+Ancient Model(2000 BCE)
+// Portability
+
+Book Paper model (1700 CE)
+	: Easy Destroy
+catelog Model (1900)
+	:Difficult to Search(Manually)
+Flat File Model (1920)
+    :First Aumated Model
+	 Easy to Store and Search
+	 But it failed Big Data
+Hierarchical
+(IBM IMS) model (1960)
+  Hierarchical (Binary tree)
+  which very for Searching become easy
+  but difficult visa versa
+GE's Network (1970)
+to resolve the problem of
+visa versa (child node can have
+   Multiple Parent
+)
+that Become more clumsy and
+difficult to read 
