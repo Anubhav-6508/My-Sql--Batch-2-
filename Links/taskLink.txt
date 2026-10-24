@@ -1,1 +1,4 @@
 https://www.geeksforgeeks.org/mysql/how-to-install-mysql-in-windows/
+
+
+https://sql-island.informatik.uni-kl.de/#
