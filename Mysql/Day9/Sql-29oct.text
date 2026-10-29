@@ -1,0 +1,99 @@
+ String family.....
+
+char:
+	storage  :Storage size 255.
+	range    :it size of String.
+	use case : to store fixed size String
+    notes    : whatever size u give it use all size
+    example  : char(10)===> 'hi'-- --------
+
+varchar:
+	storage	 : storage size 65,535.
+	range    : String length + 1/2 byte 
+	use case : to store string 
+    notes  	 : with memory optimization
+    example  : varchar(15) 'hello' -----
+
+tinytext:
+	storage  : size 255.
+	range 	 : String length + 1 byte
+	use case : heading ...
+	notes    : it size is byte ..(small size text)
+	example  : text --> heading , name....
+
+text: 
+	storage  : size 65,535.
+	range 	 : String length + 2 byte
+	use case : paragraph
+	notes    : it's size in byte more than tinyText
+	eaxple   : writing paragraph on ......
+
+
+mediumText: 
+	storage  : 16 MB
+	range    : String length + 3byte
+	use case : use write small documents
+	notes    : it also have byte size,but use        carefully..
+	example  : write documents
+	
+
+LongText:
+	Storage  : 4GB
+	range    : String length + 4 bytes
+	use case : use for Big Documents
+	notes    : use carefully  when u storage data
+	example  : writing big Documents..
+	
+	
+enum:
+	storage  : 255
+	range    : 1,2 byte 
+	use case : at one time we can select char
+	notes    : what you create enum it store 
+	example  : enum('red','blue','green')
+
+
+set:
+    storage : 65 
+	range   : 1,2,3,4,5,6,7,8 byte
+	use case: we can use multiple choice
+	notes   : set u can choice multiple options
+	example : set('monday','tuesday','wednesday')
+        
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+
+	
