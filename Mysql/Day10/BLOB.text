@@ -1,0 +1,68 @@
+                  binary family 
+1.Bianry:
+    storage : 255
+	range   : 1 byte
+	use     : fixed range password 
+	           text password covert into binary.
+    problem : it is fixed in size 
+ eg store hi:
+    [x48] [x49] [x50]........[x57]
+      H     I    null ....... null
+	  
+2. varBinary
+   storage  : 65,535
+   range    :  1 byte
+   use      : it not fixed size . 
+              how char u storing that much
+			  byte it use 
+ eg store Hi 
+   [x48] [x49]
+    H      I
+	
+               BLOB(Binary Large Object):
+TinyBlob 
+    storage : 255 byte
+	use     : storing samll/tiny  icons
+	they are stored in binary formate 
+
+
+blob:
+   storage : 65,535 byte
+   use to store samll images 
+   
+   
+mediumblob
+   storage : 16 mb
+   use to store images, documents
+
+Longblob
+    storage : 4GB
+    use to store video, big documents
+
+step: 1
+C:\ProgramData\MySQL\MySQL Server 8.0\Uploads
+step: 2
+  upload the image in this loacation
+step 3: 
+right click on the image find properties
+step 4: 
+   find security
+step 5: 
+ copy url / location
+
+step 6 :
+paste in My Sql
+
+step 7:
+keep in mind slash should backward direction
+
+step 8: 
+remove c:/  --> write by your self
+
+step 9 :
+ run the insert command
+
+step 10: 
+ right click blob see the image  
+
+			   

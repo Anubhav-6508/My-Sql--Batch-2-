@@ -1,0 +1,74 @@
+Date Family:
+
+Date:
+     storage : 3 byte
+	 use : DOB
+     structer : YYYY:MM:DD
+	
+dateTime:
+    storage :  8 byte
+    use : marraige
+   	structer: YYYY:MM:DD :HH : MM: SS
+	
+Timestamp:
+     storage: 4 byte
+	 use : Time Zone
+    structer: YYYY:MM:DD :HH : MM: SS
+	
+Time :
+     storage : 3 byte
+	 use : see time 
+	 structer : HH : MM : SS
+	
+	
+Year : 
+    storage : 1 byte
+    use     : History 
+    structer: YYYY	
+	
+	
+===========================
+binary : 
+    storage : 255
+	range   : 1 byte 
+	use case : password/code
+	
+varbinary:
+    storage : 63,535
+	range   : 1 byte 
+	usecase : pan no 
+	
+Tinyblob:
+    storage : 255 byte 
+	use case : small icon
+	
+blob : 
+    storage : 63,535 byte;
+	use case : small image 
+
+medium blob:
+      storage: 16 mb
+	   use case : image 
+
+
+longblob 
+     storage : 4 gb
+     use case : movie 
+	  
+	   
+	   
+	   
+	
+	
+	
+	
+	
+	
+	
+
+
+
+	
+	
+	
+	
