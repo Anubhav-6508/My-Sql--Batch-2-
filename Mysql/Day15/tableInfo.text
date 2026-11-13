@@ -1,0 +1,30 @@
+CREATE DATABASE TEST2;
+use TEST2;
+CREATE TABLE EMPLOYEE(
+	EMP_ID INT PRIMARY KEY auto_increment,
+	FIRST_NAME varchar(70) NOT NULL,
+	LAST_NAME varchar(40) NOT NULL,
+	hire_date DATE default(current_date()),
+	EMAIL_ID varchar(100) unique ,
+	PHONE_NO varchar(30) unique, 
+	SALARY  decimal(10,2) CHECK(SALARY>0.0),
+	emp_status enum('active','inactive','terminated','on leave') default 'active',
+	create_at timestamp default current_timestamp,
+	update_at timestamp default current_timestamp on update current_timestamp
+);
+
+-- insert into EMPLOYEE values('AA','kk','rrrr@123.gmail','91+ 89896532',50000.56); 
+
+insert into EMPLOYEE(FIRST_NAME,LAST_NAME,EMAIL_ID,PHONE_NO,SALARY)
+values
+('AA','kk',null,'+91 8989562334',50000.23);
+update EMPLOYEE  set EMAIL_ID='rrr@123' where EMP_ID=1;
+
+
+select * from EMPLOYEE;
+
+ALTER TABLE EMPLOYEE
+MODIFY column (EMAIL_ID NOT NULL);
+
+
+
