@@ -1,0 +1,57 @@
+use test;
+
+create table student(
+sid tinyint primary key,
+sName varchar(30),
+marks  decimal(2,1)
+);
+alter table student
+-- add marks decimal(5,6);
+modify column marks decimal(6,4);
+
+
+desc student;
+
+
+
+
+
+insert into student (sid,sName,marks)
+values
+(107, 'AA',38.9),
+(108, 'BB',48.9),
+(109, 'CC',58.9);
+
+
+select * from student;
+
+
+
+-- what  ?
+-- where ? 
+insert into student(sid,sname,marks)
+values
+(101,'gasdy',94.2);
+
+alter table student
+add column rollNo int default 001;
+
+select * from student;
+
+alter table student 
+drop column rollNo ;
+
+truncate table student;
+
+
+
+--
+-- create 
+-- alter
+-- drop 
+-- truncate
+
+
+-- insert /select
+
+
