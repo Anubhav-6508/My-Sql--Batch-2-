@@ -1,0 +1,151 @@
+use batch2pm;
+select * from gamers;
+-- if u want specific column  then insted of writting star you have write column name 
+select username as user_name,country  from gamers;
+select username ,Glevel as level ,score from gamers;
+
+
+-- 
+select * from gamers where country='india';
+select * from gamers where platform='PC';
+select * from gamers where rank_tier='Gold';
+select * from gamers where Glevel=80;
+select * from gamers where Glevel>80;   -- greathen (>) symbol 
+select * from gamers where score<10000;  -- lessthan operator (<) symbol
+select * from gamers where Glevel>=50; --  greathan equals to (>=)  symbol
+select * from gamers where coins <=3000; -- lessthan equals to (<=) symbol
+
+select * from gamers where country !='india';   -- != <>  these operator use for not equals to 
+select * from gamers where country <>'india';
+select * from gamers where country='india' and platform='pc';
+select * from gamers where platform='pc' and Glevel>70;
+select * from gamers where country='india' and score>20000; 
+
+--  OR	
+select * from gamers where country='india' or country='USA'; 
+select * from gamers where platform='pc' or platform='playStation';
+select * from gamers where rank_tier='Gold' or rank_tier='Diamond';
+-- not
+select * from gamers where not platform='pc';  --  <> != not
+-- like
+select * from gamers  where username like 's%s';
+select * from gamers where username like '%13';
+select * from gamers where username like 'Cyber%';
+select * from gamers where username like '%Gamer%';
+select * from gamers where country like 'i%';
+-- not like 
+select * from gamers where username not like 'Shadow%';
+
+select * from gamers where username not like '%gamers%';
+
+
+
+--  Between
+select * from gamers where Glevel between 50 and 80;
+select * from gamers where Glevel=80;
+select * from gamers where score between 15000 and 25000;
+
+
+-- In
+select * from gamers where country in('india','USA','Japan');
+select * from gamers where platform in('Xbox','PlayStation','PC');
+
+
+select distinct(country) from gamers;
+select distinct platform from gamers;
+
+select distinct rank_tier from gamers;
+select distinct(country) ,platform from gamers;
+
+
+-- count
+select count(*) from gamers where country='india' ;
+select count(*) from gamers where platform = 'pc';
+
+select count(*) from gamers where rank_tier='Diamond';
+
+
+-- count + distinct
+select count(distinct country) from gamers;
+
+select count(distinct platform) from gamers; 
+
+select count(distinct rank_tier) from gamers; 
+
+select sum(coins) from gamers;
+
+-- Avg
+
+select avg(Glevel) from gamers;
+select avg(score) from gamers;
+
+-- min and max
+select max(score) from gamers;
+select min(score) from gamers;
+
+select max(Glevel) from gamers;
+
+
+
+
+-- Question
+-- Question 50. Find Indian gamers whose level is greater than 70
+select * from gamers where country='india'and Glevel>70;
+
+-- Question 51. Find PC gamers whose score is greater than 20000
+select * from gamers where platform='pc' and score>20000;
+
+-- Question 52. Find Gold or Diamond players
+select * from gamers where rank_tier in('Gold','Diamond');
+
+-- Question 53. Find gamers whose username starts with Cyber and whose level is greater than 50
+
+select * from gamers where username like '%4' and glevel>50; 
+
+-- Question 54. Find Indian gamers whose username contains Gamer
+select * from gamers where username like '%gamer%' and country='india';
+
+-- Question 55. Count Indian gamers having level greater than 50
+select count(*) from gamers where country='india' and glevel>50;
+
+-- Question 56. Count gamers who are NOT using PC
+select count(*) from gamers where platform<>'pc';
+
+-- Question 57. Count gamers from India, USA and Japan
+select count(*) from gamers where country in('india','USA','Japan'); 
+
+
+-- Question 58. Find gamers whose level is between 40 and 80 and rank is Gold
+select * from gamers where (glevel between 40 and 80) and rank_tier='Gold'; 
+
+-- Question 59. Count different countries
+select count(distinct(country)) as uniqe from gamers; 
+
+-- Question 60. Find the average score of PC gamers
+select avg(score) from gamers where platform='Pc';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
